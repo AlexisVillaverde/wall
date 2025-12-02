@@ -2,12 +2,21 @@
 //configuración estricta de tipos
 declare(strict_types=1);
 
-$host = 'localhost';
-$db = 'sistema_seguro';
-$user = 'root';
-$pass = '';
+// Cargar configuración desde el archivo .env 
+$env_file = __DIR__ . '/.env';
+
+if (file_exists($env_file)) {
+    $env = parse_ini_file($env_file);
+} else {
+    die("Error crítico: No se encuentra el archivo de configuración de entorno.");
+}
+
+$host = $env['DB_HOST'];
+$port = $env['DB_PORT'];
+$db   = $env['DB_NAME'];
+$user = $env['DB_USER'];
+$pass = $env['DB_PASS'];
 $charset = 'utf8mb4';
-$port = '3309';
 
 $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
 $options = [

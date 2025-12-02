@@ -1,4 +1,5 @@
 <?php
+require'conexiondb.php';
 session_start();
 
 // Validar que el usuario esté logueado
@@ -20,7 +21,8 @@ $modulo = $_GET['modulo'] ?? 'inicio';
 $modulos_permitidos = [
     'inicio' => 'modulos/inicio.php',
     'perfil' => 'modulos/perfil.php',
-    'crud'   => 'modulos/crud.php'
+    'crud'   => 'modulos/crud.php',
+    'comentarios' => 'modulos/comentarios.php'
 ];
 
 ?>
@@ -41,7 +43,8 @@ $modulos_permitidos = [
             
             <a class="navbar-item" href="?modulo=inicio">Inicio</a>  
             <a class="navbar-item" href="?modulo=perfil">Mi Perfil</a>  
-            <a class="navbar-item" href="?modulo=crud">Gestión (CRUD)</a> 
+            <a class="navbar-item" href="?modulo=crud">Gestión (CRUD)</a>
+            <a class="navbar-item" href="?modulo=comentarios">Comentarios</a> 
             <a class="navbar-item" href="logout.php">Cerrar Sesión</a>
         </div>
         <div class="navbar-end">
