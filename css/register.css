@@ -1,0 +1,31 @@
+*{
+margin:0px;
+padding:0px;
+}
+
+body{
+	margin: 0px auto;	
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	margin: 100px auto;
+	padding: 30px;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 12px #aaa;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+}
+
+:root {
+    --bulma-label-color: hsl(0deg 0% 0%);
+}
+
+.field.label{
+    --bulma-label-color: black;
+    color: var(--bulma-label-color);
+}
+
