@@ -1,5 +1,4 @@
 <?php
-session_start();
 // Validar que el usuario esté logueado
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php"); 
