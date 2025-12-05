@@ -2,9 +2,10 @@
 // Verificar acceso directo
 if (!defined('PDO::ATTR_DRIVER_NAME')) {
     // Si se intenta acceder directamente sin pasar por index.php, requerimos la conexión
-    // pero idealmente este archivo solo se incluye desde index.php
-    if(file_exists('../conexiondb.php')) require '../conexiondb.php';
-    else require 'conexiondb.php';
+    if (file_exists('../conexiondb.php'))
+        require '../conexiondb.php';
+    else
+        require 'conexiondb.php';
 }
 
 // Lógica para guardar comentario (POST)

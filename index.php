@@ -40,8 +40,7 @@ $modulos_permitidos = [
         
         <div class="navbar-start">
             
-            
-            <a class="navbar-item" href="?modulo=inicio">Inicio</a>  
+             
             <a class="navbar-item" href="?modulo=perfil">Mi Perfil</a>  
             <a class="navbar-item" href="?modulo=crud">Gestión (CRUD)</a>
             <a class="navbar-item" href="?modulo=comentarios">Comentarios</a> 
